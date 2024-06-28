@@ -1,0 +1,20 @@
+# pyproject.toml
+[project]
+name = "MatPainter"
+version = "0.1.0"
+description = '''
+Advanced Material Map Generation for 3D Texturing
+'''
+
+[build-system]
+requires = [
+    "setuptools>=42",
+    "click",
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+exclude = ["tests*"]
+
+[project.scripts]
+mat-generate = "matpainter.pipeline:cli"
